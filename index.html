@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScoreZone - Live Football Results</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVBAR -->
+    <header class="navbar">
+        <div class="navbar-left">
+            <div class="logo">
+                <i class="fas fa-futbol spin"></i>
+                <span>Score<span class="accent">Zone</span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="active"><i class="fas fa-futbol"></i> Football</a>
+                <a href="#"><i class="fas fa-basketball-ball"></i> Basketball</a>
+                <a href="#"><i class="fas fa-table-tennis"></i> Tennis</a>
+                <a href="#"><i class="fas fa-star"></i> Favourites</a>
+            </nav>
+        </div>
+        <div class="navbar-right">
+            <button class="login-btn" onclick="openLoginModal()">
+                <i class="fas fa-user"></i> Admin Login
+            </button>
+        </div>
+    </header>
+
+    <!-- DATE BAR -->
+    <div class="date-bar">
+        <button class="date-btn"><i class="fas fa-chevron-left"></i></button>
+        <span class="date-item">Mon 09/02</span>
+        <span class="date-item">Tue 10/02</span>
+        <span class="date-item">Wed 11/02</span>
+        <span class="date-item active-date">Thu 12/02</span>
+        <span class="date-item today">Today</span>
+        <span class="date-item">Sat 14/02</span>
+        <span class="date-item">Sun 15/02</span>
+        <button class="date-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+        <div class="sidebar-left">
+            <div class="sidebar-section">
+                <h3><i class="fas fa-trophy"></i> TOP LEAGUES</h3>
+                <ul>
+                    <li class="active-league"><img src="https://flagcdn.com/w20/gb-eng.png" alt=""> Premier League</li>
+                    <li><img src="https://flagcdn.com/w20/es.png" alt=""> La Liga</li>
+                    <li><img src="https://flagcdn.com/w20/de.png" alt=""> Bundesliga</li>
+                    <li><img src="https://flagcdn.com/w20/it.png" alt=""> Serie A</li>
+                    <li><img src="https://flagcdn.com/w20/fr.png" alt=""> Ligue 1</li>
+                    <li><img src="https://flagcdn.com/w20/tn.png" alt=""> Ligue Pro TN</li>
+                    <li><img src="https://flagcdn.com/w20/eu.png" alt=""> Champions League</li>
+                </ul>
+            </div>
+            <div class="sidebar-section">
+                <h3><i class="fas fa-globe-africa"></i> AFRICA</h3>
+                <ul>
+                    <li><img src="https://flagcdn.com/w20/tn.png" alt=""> Tunisia - Ligue 1</li>
+                    <li><img src="https://flagcdn.com/w20/dz.png" alt=""> Algeria - Ligue 1</li>
+                    <li><img src="https://flagcdn.com/w20/ma.png" alt=""> Morocco - Botola</li>
+                    <li><img src="https://flagcdn.com/w20/eg.png" alt=""> Egypt - Premier</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- MATCHES SECTION -->
+        <div class="matches-section">
+            <!-- PREMIER LEAGUE -->
+            <div class="league-block">
+                <div class="league-header">
+                    <img src="https://flagcdn.com/w20/gb-eng.png" alt="">
+                    <span class="league-country">ENGLAND:</span>
+                    <span class="league-name">Premier League</span>
+                    <span class="league-round">Round 25</span>
+                </div>
+
+                <div class="match-row">
+                    <span class="match-time live-pulse">LIVE 67'</span>
+                    <div class="match-teams">
+                        <div class="team home">
+                            <span>Manchester City</span>
+                        </div>
+                        <div class="match-score">
+                            <span class="score">2</span>
+                            <span class="score-sep">-</span>
+                            <span class="score">1</span>
+                        </div>
+                        <div class="team away">
+                            <span>Arsenal</span>
+                        </div>
+                    </div>
+                    <div class="match-extra">
+                        <i class="fas fa-star fav-star"></i>
+                    </div>
+                </div>
+
+                <div class="match-row">
+                    <span class="match-time live-pulse">LIVE 34'</span>
+                    <div class="match-teams">
+                        <div class="team home">
+                            <span>Liverpool</span>
+                        </div>
+                        <div class="match-score">
+                            <span class="score">1</span>
+                            <span class="score-sep">-</span>
+                            <span class="score">1</span>
+                        </div>
+                        <div class="team away">
+                            <span>Chelsea</span>
+                        </div>
+                    </div>
+                    <div class="match-extra">
+                        <i class="fas fa-star fav-star"></i>
+                    </div>
+                </div>
+
+                <div class="match-row finished">
+                    <span class="match-time">FT</span>
+                    <div class="match-teams">
+                        <div class="team home winner">
+                            <span>Tottenham</span>
+                        </div>
+                        <div class="match-score">
+                            <span class="score">3</span>
+                            <span class="score-sep">-</span>
+                            <span class="score">0</span>
+                        </div>
+                        <div class="team away">
+                            <span>Aston Villa</span>
+                        </div>
+                    </div>
+                    <div class="match-extra">
+                        <i class="fas fa-star fav-star"></i>
+                    </div>
+                </div>
+
+                <div class="match-row upcoming">
+                    <span class="match-time">20:45</span>
+                    <div class="match-teams">
+                        <div class="team home">
+                            <span>Newcastle</span>
+                        </div>
+                        <div class="match-score">
+                            <span class="score">-</span>
+                            <span class="score-sep"></span>
+                            <span class="score">-</span>
+                        </div>
+                        <div class="team away">
+                            <span>Man United</span>
+                        </div>
+                    </div>
+                    <div class="match-extra">
+                        <i class="fas fa-star fav-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LA LIGA -->
+            <div class="league-block">
+                <div class="league-header">
+                    <img src="https://flagcdn.com/w20/es.png" alt="">
+                    <span class="league-country">SPAIN:</span>
+                    <span class="league-name">La Liga</span>
+                    <span class="league-round">Round 24</span>
+                </div>
+
+                <div class="match-row finished">
+                    <span class="match-time">FT</span>
+                    <div class="match-teams">
+                        <div class="team home winner">
+                            <span>Real Madrid</span>
+                        </div>
+                        <div class="match-score">
+                            <span class="score">4</span>
+                            <span class="score-sep">-</span>
+                            <span class="score">2</span>
+                        </div>
+                        <div class="team away">
+                            <span>Atlético Madrid</span>
+                        </div>
+                    </div>
+                    <div class="match-extra">
+                        <i class="fas fa-star fav-star"></i>
+                    </div>
+                </div>
+
+                <div class="match-row">
+                    <span class="match-time live-pulse">LIVE 82'</span>
+                    <div class="match-teams">
+                        <div class="team home">
+                            <span>FC Barcelona</span>
+                        </div>
+                        <div class="match-score">
+                            <span class="score">3</span>
+                            <span class="score-sep">-</span>
+                            <span class="score">1</span>
+                        </div>
+                        <div class="team away">
+                            <span>Sevilla</span>
+                        </div>
+                    </div>
+                    <div class="match-extra">
+                        <i class="fas fa-star fav-star"></i>
+                    </div>
+                </div>
+
+                <div class="match-row upcoming">
+                    <span class="match-time">21:00</span>
+                    <div class="match-teams">
+                        <div class="team home">
+                            <span>Real Sociedad</span>
+                        </div>
+                        <div class="match-score">
+                            <span class="score">-</span>
+                            <span class="score-sep"></span>
+                            <span class="score">-</span>
+                        </div>
+                        <div class="team away">
+                            <span>Valencia</span>
+                        </div>
+                    </div>
+                    <div class="match-extra">
+                        <i class="fas fa-star fav-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LIGUE PRO TUNISIE -->
+            <div class="league-block">
+                <div class="league-header">
+                    <img src="https://flagcdn.com/w20/tn.png" alt="">
+                    <span class="league-country">TUNISIA:</span>
+                    <span class="league-name">Ligue Professionnelle 1</span>
+                    <span class="league-round">Journée 18</span>
+                </div>
+
+                <div class="match-row">
+                    <span class="match-time live-pulse">LIVE 55'</span>
+                    <div class="match-teams">
+                        <div class="team home">
+                            <span>Espérance de Tunis</span>
+                        </div>
+                        <div class="match-score">
+                            <span class="score">2</span>
+                            <span class="score-sep">-</span>
+                            <span class="score">0</span>
+                        </div>
+                        <div class="team away">
+                            <span>Club Africain</span>
+                        </div>
+                    </div>
+                    <div class="match-extra">
+                        <i class="fas fa-star fav-star"></i>
+                    </div>
+                </div>
+
+                <div class="match-row finished">
+                    <span class="match-time">FT</span>
+                    <div class="match-teams">
+                        <div class="team home">
+                            <span>ES Sahel</span>
+                        </div>
+                        <div class="match-score">
+                            <span class="score">1</span>
+                            <span class="score-sep">-</span>
+                            <span class="score">1</span>
+                        </div>
+                        <div class="team away">
+                            <span>CS Sfaxien</span>
+                        </div>
+                    </div>
+                    <div class="match-extra">
+                        <i class="fas fa-star fav-star"></i>
+                    </div>
+                </div>
+
+                <div class="match-row upcoming">
+                    <span class="match-time">19:30</span>
+                    <div class="match-teams">
+                        <div class="team home">
+                            <span>US Monastir</span>
+                        </div>
+                        <div class="match-score">
+                            <span class="score">-</span>
+                            <span class="score-sep"></span>
+                            <span class="score">-</span>
+                        </div>
+                        <div class="team away">
+                            <span>ST Gabésien</span>
+                        </div>
+                    </div>
+                    <div class="match-extra">
+                        <i class="fas fa-star fav-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CHAMPIONS LEAGUE -->
+            <div class="league-block">
+                <div class="league-header">
+                    <img src="https://flagcdn.com/w20/eu.png" alt="">
+                    <span class="league-country">EUROPE:</span>
+                    <span class="league-name">UEFA Champions League</span>
+                    <span class="league-round">Round of 16</span>
+                </div>
+
+                <div class="match-row upcoming">
+                    <span class="match-time">21:00</span>
+                    <div class="match-teams">
+                        <div class="team home">
+                            <span>PSG</span>
+                        </div>
+                        <div class="match-score">
+                            <span class="score">-</span>
+                            <span class="score-sep"></span>
+                            <span class="score">-</span>
+                        </div>
+                        <div class="team away">
+                            <span>Bayern Munich</span>
+                        </div>
+                    </div>
+                    <div class="match-extra">
+                        <i class="fas fa-star fav-star"></i>
+                    </div>
+                </div>
+
+                <div class="match-row upcoming">
+                    <span class="match-time">21:00</span>
+                    <div class="match-teams">
+                        <div class="team home">
+                            <span>Inter Milan</span>
+                        </div>
+                        <div class="match-score">
+                            <span class="score">-</span>
+                            <span class="score-sep"></span>
+                            <span class="score">-</span>
+                        </div>
+                        <div class="team away">
+                            <span>Borussia Dortmund</span>
+                        </div>
+                    </div>
+                    <div class="match-extra">
+                        <i class="fas fa-star fav-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDEBAR -->
+        <div class="sidebar-right">
+            <div class="sidebar-section standings">
+                <h3><i class="fas fa-list-ol"></i> STANDINGS</h3>
+                <table class="standings-table">
+                    <thead>
+                        <tr><th>#</th><th>Team</th><th>P</th><th>Pts</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>1</td><td>Liverpool</td><td>24</td><td class="pts">58</td></tr>
+                        <tr><td>2</td><td>Arsenal</td><td>24</td><td class="pts">53</td></tr>
+                        <tr><td>3</td><td>Man City</td><td>24</td><td class="pts">50</td></tr>
+                        <tr><td>4</td><td>Chelsea</td><td>24</td><td class="pts">46</td></tr>
+                        <tr><td>5</td><td>Tottenham</td><td>24</td><td class="pts">42</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="sidebar-section top-scorers">
+                <h3><i class="fas fa-shoe-prints"></i> TOP SCORERS</h3>
+                <div class="scorer-row">
+                    <span class="scorer-rank">1</span>
+                    <span class="scorer-name">M. Salah</span>
+                    <span class="scorer-goals">18 <i class="fas fa-futbol"></i></span>
+                </div>
+                <div class="scorer-row">
+                    <span class="scorer-rank">2</span>
+                    <span class="scorer-name">E. Haaland</span>
+                    <span class="scorer-goals">16 <i class="fas fa-futbol"></i></span>
+                </div>
+                <div class="scorer-row">
+                    <span class="scorer-rank">3</span>
+                    <span class="scorer-name">C. Palmer</span>
+                    <span class="scorer-goals">14 <i class="fas fa-futbol"></i></span>
+                </div>
+                <div class="scorer-row">
+                    <span class="scorer-rank">4</span>
+                    <span class="scorer-name">A. Isak</span>
+                    <span class="scorer-goals">12 <i class="fas fa-futbol"></i></span>
+                </div>
+                <div class="scorer-row">
+                    <span class="scorer-rank">5</span>
+                    <span class="scorer-name">Son H.M.</span>
+                    <span class="scorer-goals">11 <i class="fas fa-futbol"></i></span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- LOGIN MODAL (SQL INJECTION VULNERABILITY) -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal-content login-modal">
+            <div class="modal-header">
+                <h2><i class="fas fa-lock"></i> Admin Panel Login</h2>
+                <button class="modal-close" onclick="closeLoginModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="login-form">
+                    <div class="login-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <p class="login-subtitle">Authorized personnel only. Enter your credentials.</p>
+
+                    <div class="form-group">
+                        <label for="loginUsername"><i class="fas fa-user"></i> Username</label>
+                        <input type="text" id="loginUsername" placeholder="Enter username" autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword"><i class="fas fa-key"></i> Password</label>
+                        <input type="password" id="loginPassword" placeholder="Enter password" autocomplete="off">
+                    </div>
+
+                    <button class="login-submit" onclick="attemptLogin()">
+                        <i class="fas fa-sign-in-alt"></i> Sign In
+                    </button>
+
+                    <p class="login-footer-text">ScoreZone Admin v3.2.1 | Powered by MySQL 8.0</p>
+                </div>
+
+                <!-- SQL Query Display (simulated) -->
+                <div class="sql-query-box" id="sqlQueryBox">
+                    <div class="sql-label"><i class="fas fa-database"></i> Executing Query:</div>
+                    <code id="sqlQuery"></code>
+                </div>
+
+                <!-- Login Result -->
+                <div id="loginResult" class="login-result"></div>
+
+                <!-- Database dump (hidden by default, shown on SQLi) -->
+                <div id="databaseDump" class="database-dump" style="display: none;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 ScoreZone - Live Football Results | All rights reserved</p>
+            <p class="footer-disclaimer">Data provided for informational purposes only.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
